@@ -32,7 +32,7 @@ jobs:
           fi
       
       - name: Update-Github-Sdk-Index
-        if: ${{ github.repository == 'jianbojason/ruiching-sdk-index' && github.ref == 'refs/heads/main' && github.event_name == 'push' && env.script_exists == 'true' }}
+        if: ${{ github.repository == 'RT-Thread-Studio/ruiching-sdk-index' && github.ref == 'refs/heads/main' && github.event_name == 'push' && env.script_exists == 'true' }}
         run: |
           cd ${{ github.workspace }}/scripts
           python merge_sdk.py
@@ -47,7 +47,7 @@ jobs:
           fi
 
       - name: Update-Gogs-Packages-Mirror
-        if: ${{ github.repository == 'jianbojason/ruiching-sdk-index' && github.ref == 'refs/heads/main' && github.event_name == 'push' && env.script_exists == 'true' }}
+        if: ${{ github.repository == 'RT-Thread-Studio/ruiching-sdk-index' && github.ref == 'refs/heads/main' && github.event_name == 'push' && env.script_exists == 'true' }}
         env:
           GOGS_URL: ${{ secrets.GOGS_URL }}
           GOGS_TOKEN: ${{ secrets.GOGS_TOKEN }}
