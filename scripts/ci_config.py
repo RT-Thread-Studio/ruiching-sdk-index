@@ -1,0 +1,1 @@
+INDEX_SERVER_URL="https://api.rt-thread.org/studio/indexserver"
