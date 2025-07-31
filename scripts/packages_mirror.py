@@ -118,9 +118,9 @@ class PackagesSync:
             logging.error("Error message: {0}.".format(e))
             # print('e.code  : '+str(e.code) )
             # print('e.reason: '+str(e.reason) )
-        print(resp)
+        #print(resp)
         org_repos_json = json.loads(resp)
-        print(org_repos_json)
+        #print(org_repos_json)
         for item in org_repos_json:
             if item['name'] == repo:
                 print(item['name'] + ' Already existed, sync...')
